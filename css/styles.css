@@ -366,7 +366,7 @@ a {
 }
 
 body {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 /* ============================================= */
@@ -374,10 +374,68 @@ body {
 /* ============================================= */
 body {
   font-family: "Open Sans", sans-serif;
+  color: #404a51;
+}
+
+h1 {
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.directory-item .name {
+  font-size: 19px;
+  font-weight: 700;
+}
+.directory-item .email, .directory-item .city-location {
+  color: #888e92;
+  font-size: 15px;
 }
 
 /* ============================================= */
 /*                 Components Imports            */
 /* ============================================= */
+/* ============================================= */
+/*                Directory list                 */
+/* ============================================= */
+h1 {
+  margin-left: 15px;
+}
+
+.directory-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.directory-item {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid lightgrey;
+  margin: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.directory-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.directory-item div {
+  display: flex;
+  flex-direction: column;
+}
+.directory-item div p {
+  margin: 5px 0px 5px 20px;
+  word-break: break-all;
+}
 
 /*# sourceMappingURL=styles.css.map */

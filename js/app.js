@@ -18,15 +18,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function fetchJSONfrom(url) {
-    // returns resolved/rejected promise with value
-    return fetch(url)
-      .then(checkHTTPstatus)
-      .then(response => response.json())
-      .catch(reason => {
-        console.log("Error when fetching data:", reason);
-        // keep promise chain rejected on return
-        throw reason;
-      });
+    // fetchJSONfrom returns resolved/rejected promise with JSON/reason
+
+    function attempt() {
+      return fetch(url)
+        .then(checkHTTPstatus)
+        .then(response => response.json());
+    }
+
+    // try i times to get a resolved promise,
+    // randomuser.me sometimes doesn't send a CORS header (?)
+    let promise = Promise.reject();
+    for (i = 3; i > 0; i--) {
+      promise = promise.catch(attempt);
+    }
+
+    promise.catch(reason => {
+      console.log("Error when fetching data:", reason);
+      // keep promise chain rejected on return
+      throw reason;
+    });
+    return promise;
   }
 
   function displayDirectory(responseJSON) {
@@ -35,12 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ulHTML += "<li class='directory-item'>";
       ulHTML += `<img src='${el.picture.large}'`;
       ulHTML += `alt='Picture of ${el.name.first} ${el.name.last}'>`;
-      ulHTML += `<p class='name'>${el.name.first} ${el.name.last}</p>`;
+      ulHTML += `<div><p class='name'>${el.name.first} ${el.name.last}</p>`;
       ulHTML += `<p class='email'>${el.email}</p>`;
-      ulHTML += `<p class='city-location'>${el.location.city}</p>`;
+      ulHTML += `<p class='city-location'>${el.location.city}</p></div>`;
       ulHTML += "</li>";
     });
-    document.querySelector("ul.directory-list").innerHTML = ulHTML;
+    const directoryList = document.querySelector("ul.directory-list");
+    directoryList.innerHTML = ulHTML;
   }
 
   fetchJSONfrom("https://randomuser.me/api/?results=12")

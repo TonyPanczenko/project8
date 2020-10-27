@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 /* ============================================= */
@@ -25,4 +25,23 @@ body {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #404a51;
+}
+
+h1 {
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.directory-item {
+  .name {
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .email, .city-location {
+    color: #888e92;
+    font-size: 15px;
+  }
 }

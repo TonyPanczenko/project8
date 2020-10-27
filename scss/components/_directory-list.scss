@@ -1,0 +1,53 @@
+/* ============================================= */
+/*                Directory list                 */
+/* ============================================= */
+
+.container {
+
+}
+
+h1 {
+  margin-left: 15px;
+}
+
+.directory-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  list-style: none;
+  padding: 0;
+}
+
+.directory-item {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  border: 2px solid lightgrey;
+  margin: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+
+  img {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 5px 0px 5px 20px;
+      word-break: break-all;
+    }
+  }
+}
