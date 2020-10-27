@@ -1,0 +1,28 @@
+/* ============================================= */
+/*                 Grid                          */
+/* ============================================= */
+
+.directory-list {
+  display: grid;
+
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, 400px);
+  grid-gap: 25px 30px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 400px) {
+    width: 400px;
+  }
+
+  @media (min-width: 833px) {
+    width: 833px;
+  }
+
+  @media (min-width: 1262px) {
+    width: 1262px;
+  }
+}

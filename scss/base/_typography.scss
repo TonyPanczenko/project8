@@ -17,6 +17,11 @@ a {
 
 body {
   background-color: #eee;
+  padding-top: 40px;
+}
+
+body, html {
+  height: 100%;
 }
 
 /* ============================================= */
@@ -34,14 +39,12 @@ h1 {
   font-weight: 600;
 }
 
-.directory-item {
-  .name {
-    font-size: 19px;
-    font-weight: 700;
-  }
+.name {
+  font-size: 19px;
+  font-weight: 700;
+}
 
-  .email, .city-location {
-    color: #888e92;
-    font-size: 15px;
-  }
+.email, .city-location, .cell-number, .address, .birthday {
+  color: #888e92;
+  font-size: 15px;
 }
