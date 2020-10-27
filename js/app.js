@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function displayDirectory(responseJSON) {
     ulHTML = "";
-    responseJSON.results.forEach(el => {
-      ulHTML += "<li class='directory-item'>";
+    responseJSON.results.forEach((el, index) => {
+      ulHTML += `<li class='directory-item' id='employee-${index}'>`;
       ulHTML += `<img src='${el.picture.large}'`;
       ulHTML += `alt='Picture of ${el.name.first} ${el.name.last}'>`;
       ulHTML += `<div><p class='name'>${el.name.first} ${el.name.last}</p>`;
@@ -64,14 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
     return responseJSON;
   }
 
-  function findEmployeeByEmail(arr, email) {
-    return arr.filter(el => el.email === email)[0];
-  }
-
   function createModal(e) {
     if (e.target.classList.contains("directory-item")) {
-      const employeeEmail = e.target.querySelector("p.email").innerHTML;
-      const employee = findEmployeeByEmail(employeesJSON, employeeEmail);
+      const employeeId = e.target.id
+        .split("-")[1];
+      const employee = employeesJSON[employeeId];
 
       let divHTML = "<div class='modal'>";
       divHTML += `<img src='${employee.picture.large}'`;
