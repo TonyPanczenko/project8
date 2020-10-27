@@ -1,0 +1,49 @@
+/* ============================================= */
+/*                Variables                      */
+/* ============================================= */
+
+$primary-color              : #7477bf;
+$secondary-color            : #4d4c72;
+$accent-one                 : #81c98f;
+$accent-two                 : #74b1bf;
+$accent-icons               : #85db81;
+$subtle-bg-color            : #fbfbfb;
+
+$header-bg-color            : $primary-color;
+$bell-color                 : #fff;
+$bell-accent                : $accent-icons;
+$header-txt-color           : #fff;
+
+$nav-bg-color               : $secondary-color;
+$icon-color--on             : #fff;
+$icon-color--on-mobile      : $primary-color;
+$icon-color--off            : rgba($icon-color--on, 0.6);
+$icon-accent                : $accent-icons;
+
+$subtle-border-color        : #dfdfdf;
+
+$alert-bg-color             : $primary-color;
+$alert-txt-color            : #fff;
+$widget-bg-color            : #fff;
+$widget-txt-color           : #666;
+$search-icon-color          : $primary-color;
+$graph-radio-button-color: $accent-one;
+$bar-color                  : $primary-color;
+$pie-color-one              : $primary-color;
+$pie-color-two              : $accent-one;
+$pie-color-three            : $accent-two;
+$social-icon-color          : #fff;
+$social-icon-bg-color       : $primary-color;
+$social-brand-txt-color     : $primary-color;
+$email-txt-color            : $primary-color;
+$arrow-icon-color           : $primary-color;
+$toggle-button-color--on    : $primary-color;
+$toggle-button-color--off   : #b2b2b2;
+$toggle-button-txt-color    : #fff;
+$confirm-button-bg-color    : $primary-color;
+$cancel-button-bg-color     : #b2b2b2;
+$button-txt-color           : #fff;
+
+$mq-breakpoint-small        : 320px;
+$mq-breakpoint-medium       : 768px;
+$mq-breakpoint-large        : 1024px;

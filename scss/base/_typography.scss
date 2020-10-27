@@ -1,0 +1,28 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
