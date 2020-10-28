@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ============================================= */
 
   // on DOMContentLoaded
-  fetchJSONfrom("https://randomuser.me/api/?results=12")
+  fetchJSONfrom("https://randomuser.me/api/?results=12&nat=AU,BR,CA,CH,DE,DK,ES,FI,FR,GB,IE,NO,NL,NZ,TR,US")
     .then(displayDirectory)
     .then(saveJSON)
     .catch(reason => console.log("Error: HTML can't be generated"));

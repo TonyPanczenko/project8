@@ -407,8 +407,13 @@ h1 {
 .directory-list {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, 100%);
   grid-gap: 25px 30px;
+}
+@media (min-width: 400px) {
+  .directory-list {
+    grid-template-columns: repeat(auto-fit, 400px);
+  }
 }
 
 .container {
@@ -444,7 +449,7 @@ h1 {
 }
 
 .directory-item {
-  width: 400px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -494,7 +499,7 @@ body {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
